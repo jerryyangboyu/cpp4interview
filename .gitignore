@@ -1,0 +1,6 @@
+.idea
+dist
+cmake-build-debug
+bin
+.vscode
+out
