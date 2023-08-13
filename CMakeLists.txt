@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.26)
 project(interview)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 # Get a list of all .cpp files in the current directory
 file(GLOB CPP_SOURCES "*.cpp")
