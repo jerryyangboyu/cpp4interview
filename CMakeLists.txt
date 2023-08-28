@@ -12,5 +12,5 @@ foreach(CPP_SOURCE ${CPP_SOURCES})
     get_filename_component(EXEC_NAME ${CPP_SOURCE} NAME_WE)
 
     # Add an executable target with the file name (excluding the extension)
-    add_executable(${EXEC_NAME} ${CPP_SOURCE})
+    add_executable(${EXEC_NAME} ${CPP_SOURCE} bits/stdc++.h)
 endforeach()
