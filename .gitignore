@@ -4,3 +4,4 @@ cmake-build-debug
 bin
 .vscode
 out
+.DS_Store
