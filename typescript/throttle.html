@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const throttle = (fn, delay) => {
+            let timeOut;
+            return function() {
+                const context = this
+                const args = arguments
+                if (!timeOut) {
+                    timeOut = setTimeout(() => {
+                        fn.apply(context, args)
+                        timeOut = null
+                    }, delay)
+                }
+            }
+        }
+
+        function showTop() {
+            const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+            console.log('scrollTop', scrollTop)
+        }
+
+        window.onscroll = throttle(showTop, 1000)
+        for (let i = 0; i < 100; i++) {
+            document.write('<p>我是第' + i + '个p标签</p>')
+        }
+    </script>
+</body>
+</html>

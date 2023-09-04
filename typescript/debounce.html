@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" />
+
+    <script>
+        const debounce = (fn, delay) => {
+            let timer;
+            return function() {
+                const context = this;
+                var args = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    fn.apply(context, args)
+                }, delay)
+            }
+        }
+
+        const inputFunc = (val) => {
+            console.log(val);
+        }
+
+        const input = document.getElementById('input');
+        const debounceInput = debounce(inputFunc, 1000);
+        input.addEventListener('keyup', (e) => {
+            debounceInput(e.target.value);
+        });
+    </script>
+</body>
+</html>
