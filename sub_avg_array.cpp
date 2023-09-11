@@ -1,11 +1,10 @@
 #include <iostream>
 #include <vector>
-#include <numeric>
 
 using namespace std;
 
 int findMaxSubsequenceLength(const vector<int>& arr, int m) {
-    int n = arr.size();
+    auto n = arr.size();
 
     // Create a difference array: diff[i] = arr[i] - m
     vector<int> diff(n);
