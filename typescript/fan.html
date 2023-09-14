@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin: 10px;
+        }
+
+        .inside {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .fan1 {
+            border: red 50px solid;
+            border-color: red transparent transparent transparent;
+            border-radius: 50px;
+        }
+
+        .fan2 {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* top-left | top-right-and-bottom-left | bottom-right */
+            border-radius: 50px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="insdie fan1"></div>
+    </div>
+    <div class="container">
+        <div class="inside fan2"></div>
+    </div>
+</body>
+
+</html>
